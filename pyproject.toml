@@ -1,0 +1,25 @@
+[project]
+name = "wiki-scraper"
+version = "0.1.0"
+description = "A wikipedia scraper and page downloader."
+readme = "README.md"
+authors = [
+    { name = "Aarav Agarwal", email = "279409447+python-neo@users.noreply.github.com" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "aiofiles>=25.1.0",
+    "wikipedia-api>=0.16.0",
+]
+
+[project.scripts]
+wiki-scraper = "wiki_scraper.main:main"
+
+[project.optional-dependencies]
+dev = [
+    "ruff>=0.16.0",
+]
+
+[build-system]
+requires = ["uv_build>=0.12.5,<0.13.0"]
+build-backend = "uv_build"
